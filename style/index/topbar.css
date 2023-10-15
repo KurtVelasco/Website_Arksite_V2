@@ -1,0 +1,129 @@
+.main-website {
+    background: url();
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    animation: imageTransition 25s infinite; 
+  }
+.main-top-bar{
+    display: flex;
+    background-color: blue;
+    width: 100%;
+    height: 60px;
+    left: 0;
+    top: 0;
+    position: fixed;
+
+}
+/* logo */
+.top-bar-logo{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+}
+
+.top-bar-logo img{
+  align-self: center;
+  display: flex;
+}
+
+/* button */
+.top-bar-dropdown{
+  display: flex;
+  position: relative;
+
+}
+.top-bar-dropdown-button{
+    align-self: center;
+}
+.dropdown-menu{
+  position: absolute;
+  left: 0;
+  top: calc(100% + .25rem);
+  background-color: white;
+  padding: .75rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+/*Link of child property https://www.youtube.com/watch?v=S-VeYcOCFZw
+/*.top-bar-dropdown > .link:focus +.dropdown-menu{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+*/
+
+.dropdown-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2rem;
+}
+.dropdown-heading{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 0.2rem;
+}
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+.dropdown-links a{
+  font-family: 'Courier New', Courier, monospace;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* login */
+
+.top-bar-login{
+  margin-left: auto;
+  display: flex;
+  position: relative;
+}
+.top-bar-login-button{
+  align-self: center;
+}
+.dropdown-login-heading{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.dropdown-menu-login{
+  position: absolute;
+  right: 0;
+  top: calc(100% + .25rem);
+  background-color: white;
+  padding: .75rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+.dropdown-menu-login.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.login-form button{
+  width: 50%;
+}
+
