@@ -9,10 +9,9 @@
 .main-top-bar{
     display: flex;
     background-color: blue;
-    width: 100%;
+    width: 80%;
     height: 60px;
-    left: 0;
-    top: 0; 
+    position: fixed;
     border-radius: 5px;
 
 }
