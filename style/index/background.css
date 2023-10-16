@@ -1,0 +1,24 @@
+.main-website {
+    background: url(); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: imageTransition 25s infinite; 
+  }
+  @keyframes imageTransition {
+    0% {
+      background-image: url(https://raw.githubusercontent.com/Aceship/Arknight-Images/main/avg/images/41_i07.png);
+    }
+    25% {
+      background-image: url(https://raw.githubusercontent.com/Aceship/Arknight-Images/main/avg/images/27_i10.png);
+    }
+    50% {
+      background-image: url(https://raw.githubusercontent.com/Aceship/Arknight-Images/main/avg/images/26_i10.png);
+    }
+    75% {
+      background-image:url(https://raw.githubusercontent.com/Aceship/Arknight-Images/main/avg/images/26_i03.png);
+    }
+    100% {
+      background-image: url(https://raw.githubusercontent.com/Aceship/Arknight-Images/main/avg/images/41_i07.png);
+    }
+  }
