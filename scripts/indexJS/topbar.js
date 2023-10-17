@@ -1,4 +1,4 @@
-document.querySelector('.top-bar-dropdown-button').addEventListener('click', toggleDropdownMenu);
+document.querySelector('.topbar-dropdown-button').addEventListener('click', toggleDropdownMenu);
 document.querySelector('.top-bar-login-button').addEventListener('click', toggleDropdownMenuLogin);
 
 
