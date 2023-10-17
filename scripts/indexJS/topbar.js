@@ -15,3 +15,8 @@ function showCredentials() {
     var password = document.getElementById("password").value;
     alert("Username: " + username + "\nPassword: " + password);
 }
+
+function showOptionBar() {
+  var optionBar = document.querySelector('.option-bar');
+  optionBar.classList.add('show');
+}

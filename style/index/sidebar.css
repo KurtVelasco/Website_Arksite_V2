@@ -17,52 +17,69 @@ main{
     margin-left: 5rem;
     padding: 1rem;
 }
-body::-webkit-scrollbar{
-    width: 0.25rem;
-}
 
+/* main Side NavBar */
 .side-navbar{
     width: 5rem;
     height: 100vh;
     position: fixed;
-    background-color: var(--bg-primary);
-    transition: width 500ms ease
+    background-color: rgb(39, 39, 39);
+    transition: width 500ms ease;
+
 }
 .side-navbar:hover{
     width: 15rem;
 }
-.nav-logo{ 
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.3ch;
-    font-size: 1.5rem;
-    ;
-    width: 100%;
-    background-color: rgb(86, 87, 88);
+.side-navbar:hover + main .main-topbar {
+    top: -100px;
 }
-.nav-logo svg{
+
+/* navbar logo */
+.nav-logo{ 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    font-size: 1rem;;
+    width: 100%;
+    background-color: #1e1e1f;
+    border-radius: 5px; 
+}
+
+.nav-logo .profile-pic{
+    background-color: rgb(56, 55, 55);
+    border-radius: 10px;
+    height: 60;
+    width: 60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     left:0%;
     transform: rotate(0deg);
     transition: var(--transition-speed);
 }
+.profile-pic img{
+    max-width: 50;
+    align-self: center;
+}
 .logo-text{
-    display: inline;
     position: absolute;
+    text-decoration: none;
+    letter-spacing: 0.1ch;
+    color: gray;
     left: -500px;
     transition: var(--transition-speed);
 }
 
 .side-navbar:hover .logo-text{
-    left: 0%;
-    margin-left: 3rem;
+    left: 10%;
+
 }
-.side-navbar:hover .logo-svg{
-    left: 10rem;
-    transform: rotate(360deg);
+.side-navbar:hover .profile-pic{
+    left: 10.5rem;
+    transform: rotate(0deg);
 }
 
+/* navbar items */
 .navbar-nav{
     list-style: none;
     padding: 0;
@@ -72,36 +89,29 @@ body::-webkit-scrollbar{
     align-items: center;
     height: 100%;
 }
-
 .navbar-items{
-    width: 100%;
-}
-.navbar-logo{
-    width: 100%;
-}
-.nav-logo{
     width: 100%;
 }
 .navbar-items:last-child{
     margin-top: auto;
 }
 
-.nav-link {
+
+.nav-link { /* nav-links are the icons fuck */
     display: flex;
     align-items: center;
     height: 5rem;
     text-decoration: none;
-    filter: grayscale(100%) opacity(1) hue-rotate(90deg);
-    transition: opacity 300ms ease-in-out, filter 300ms ease-in-out
+    transition: opacity 300ms ease-in-out;
+    transition: var(--transition-speed);
 
 }
 .nav-link:hover {
-    filter:grayscale(0%) opacity(1);
     background-color: rgb(44, 36, 75);
 }
 .nav-link:hover svg {
     transform: rotate(360deg);
-    filter:grayscale(0%) opacity(1);
+    fill: rgb(85, 162, 214);
 }
 
 .nav-link svg{
@@ -110,6 +120,7 @@ body::-webkit-scrollbar{
     min-width: 3rem;
     margin: 0 1rem;
 }
+
 .link-text{
     opacity: 0;
     transition: opacity 300ms;
@@ -121,5 +132,26 @@ body::-webkit-scrollbar{
     opacity: 1;
 }
 .navbar-items span{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 0.1ch ;
+    font-size:  normal;
+    width: 100%;
+}
+
+/* option */
+.option-bar{
+    position: absolute;
+    top: 100%;
+    left: 15rem;
+    width: 10rem;
+    height: 50vh;
+}
+.option-bar.show{
+    position: absolute;
+    top: 50%;
+    left: 15rem;
+    width: 10rem;
+    height: 50vh;
+    background-color: rgb(39, 39, 39);
+    transition: var(--transition-speed)
 }
