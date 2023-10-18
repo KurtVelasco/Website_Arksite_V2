@@ -1,6 +1,6 @@
 document.querySelector('.topbar-dropdown-button').addEventListener('click', toggleDropdownMenu);
 document.querySelector('.top-bar-login-button').addEventListener('click', toggleDropdownMenuLogin);
-
+document.querySelector('.navbar-items.options').addEventListener('click', showOptionBar);
 
 function toggleDropdownMenu() {
     document.querySelector('.dropdown-menu').classList.toggle('show');
@@ -17,6 +17,6 @@ function showCredentials() {
 }
 
 function showOptionBar() {
-  var optionBar = document.querySelector('.option-bar');
-  optionBar.classList.add('show');
+  document.querySelector('.option-bar').classList.toggle('show');
+
 }

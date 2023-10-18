@@ -113,7 +113,10 @@ main{
     transform: rotate(360deg);
     fill: rgb(85, 162, 214);
 }
-
+.nav-link {
+    transform: rotate(360deg);
+    fill: rgb(85, 162, 214);
+}
 .nav-link svg{
     transition: var(--transition-speed);
     transform: rotate(0deg);
