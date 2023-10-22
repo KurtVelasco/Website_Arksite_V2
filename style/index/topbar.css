@@ -55,21 +55,17 @@
 }
 .dropdown-menu{
   position: absolute;
-  left: 0;
-  top: calc(100% + .25rem);
+  top: -200%;
   background-color: white;
   padding: .75rem;
   border-radius: .25rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  pointer-events: none; 
+  transition: var(--transition-speed);
 }
 
 .dropdown-menu.show {
-  opacity: 1;
-  transform: translateY(0);
+  top: 100%;
   pointer-events: auto;
 }
 

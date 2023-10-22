@@ -24,14 +24,15 @@ main{
     height: 100%;
     position: fixed;
     background-color: rgb(39, 39, 39);
-    transition: width 500ms ease;
+    transition: var(--transition-speed);
 
+    box-shadow: 30px,30px white;
 }
 .side-navbar:hover{
     width: 15rem;
 }
-.side-navbar:hover + main .main-topbar {
-    top: -100px;
+.side-navbar:hover ~ main .main-topbar {
+    top: -100;
 }
 
 /* navbar logo */
